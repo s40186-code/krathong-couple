@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>กระทงใจเดียวกัน ♡</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="stars"></div>
+
+  <header class="top">
+    <p class="eyebrow">A LITTLE WISH FOR US</p>
+    <h1>กระทงใจเดียวกัน <span>♡</span></h1>
+    <p class="subtitle">คืนพระจันทร์สวย ๆ กับคำอธิษฐานของเราสองคน</p>
+  </header>
+
+  <main>
+    <section id="setup" class="panel">
+      <h2>เริ่มต้นค่ำคืนของเรา</h2>
+      <label for="roomCode">รหัสห้องของเรา</label>
+      <div class="join-row">
+        <input id="roomCode" value="our-love" maxlength="30">
+        <button id="joinBtn">เข้าห้อง</button>
+      </div>
+      <p class="hint">ใช้รหัสห้องเดียวกันทั้งสองเครื่องนะค้าบ</p>
+
+      <label>เลือกฝั่งของตัวเอง</label>
+      <div class="side-row">
+        <button class="side-btn selected" data-side="left">ฝั่งซ้าย</button>
+        <button class="side-btn" data-side="right">ฝั่งขวา</button>
+      </div>
+      <p id="connectionStatus" class="status">กำลังเชื่อมต่อ...</p>
+    </section>
+
+    <section id="workArea" hidden>
+      <div class="panel intro-panel">
+        <h2>มาช่วยกันตกแต่งกระทงกันนะ 🌷</h2>
+        <p>เลือกดอกไม้หรือเทียน แล้วแตะบนกระทงเพื่อวางตกแต่ง</p>
+      </div>
+
+      <div class="scene-wrap">
+        <div class="moon"></div>
+        <div class="scene" id="mainScene">
+          <div class="river-glow"></div>
+
+          <svg class="krathong" viewBox="0 0 500 410" role="img" aria-label="กระทงรูปหัวใจ">
+            <defs>
+              <linearGradient id="baseGrad" x1="0" y1="0" x2="0.8" y2="1">
+                <stop offset="0" stop-color="#d7a66d"/>
+                <stop offset=".48" stop-color="#a96e3e"/>
+                <stop offset="1" stop-color="#70412d"/>
+              </linearGradient>
+              <linearGradient id="leafGrad" x1="0" y1="0" x2="1" y2="1">
+                <stop offset="0" stop-color="#d9ef9d"/>
+                <stop offset=".45" stop-color="#83a94e"/>
+                <stop offset="1" stop-color="#426d3b"/>
+              </linearGradient>
+              <linearGradient id="leafLight" x1="0" y1="0" x2="0" y2="1">
+                <stop offset="0" stop-color="#f0f5bd"/>
+                <stop offset="1" stop-color="#7f9c4e"/>
+              </linearGradient>
+              <clipPath id="leftClip">
+                <rect x="0" y="0" width="250" height="410"/>
+              </clipPath>
+              <clipPath id="rightClip">
+                <rect x="250" y="0" width="250" height="410"/>
+              </clipPath>
+            </defs>
+
+            <ellipse cx="250" cy="318" rx="195" ry="38" fill="#f5a7c7" opacity=".22"/>
+
+            <g id="leftHalf" class="half">
+              <g clip-path="url(#leftClip)">
+                <path class="heart-base" d="M250 335 C210 310 55 220 55 125 C55 25 190 20 250 105 C310 20 445 25 445 125 C445 220 290 310 250 335Z"/>
+                <path class="base-lines" d="M75 145 Q150 220 250 325 M100 105 Q155 195 250 295 M130 65 Q175 170 250 270 M170 55 Q195 155 250 245"/>
+              </g>
+            </g>
+            <g id="rightHalf" class="half">
+              <g clip-path="url(#rightClip)">
+                <path class="heart-base" d="M250 335 C210 310 55 220 55 125 C55 25 190 20 250 105 C310 20 445 25 445 125 C445 220 290 310 250 335Z"/>
+                <path class="base-lines" d="M250 325 Q350 220 425 145 M250 295 Q345 195 400 105 M250 270 Q325 170 370 65 M250 245 Q305 155 330 55"/>
+              </g>
+            </g>
+
+            <path class="rim" d="M55 125 C55 25 190 20 250 105 C310 20 445 25 445 125 C445 220 290 310 250 335 C210 310 55 220 55 125Z"/>
+            <path class="inner-heart" d="M82 126 C82 55 184 48 250 126 C316 48 418 55 418 126 C418 205 285 285 250 308 C215 285 82 205 82 126Z"/>
+
+            <g class="petal-ring">
+              <path d="M250 87 Q228 52 250 24 Q272 52 250 87Z"/>
+              <path d="M250 87 Q228 52 250 24 Q272 52 250 87Z" transform="rotate(25 250 190)"/>
+              <path d="M250 87 Q228 52 250 24 Q272 52 250 87Z" transform="rotate(50 250 190)"/>
+              <path d="M250 87 Q228 52 250 24 Q272 52 250 87Z" transform="rotate(75 250 190)"/>
+              <path d="M250 87 Q228 52 250 24 Q272 52 250 87Z" transform="rotate(100 250 190)"/>
+              <path d="M250 87 Q228 52 250 24 Q272 52 250 87Z" transform="rotate(125 250 190)"/>
+              <path d="M250 87 Q228 52 250 24 Q272 52 250 87Z" transform="rotate(150 250 190)"/>
+              <path d="M250 87 Q228 52 250 24 Q272 52 250 87Z" transform="rotate(175 250 190)"/>
+              <path d="M250 87 Q228 52 250 24 Q272 52 250 87Z" transform="rotate(200 250 190)"/>
+              <path d="M250 87 Q228 52 250 24 Q272 52 250 87Z" transform="rotate(225 250 190)"/>
+              <path d="M250 87 Q228 52 250 24 Q272 52 250 87Z" transform="rotate(250 250 190)"/>
+              <path d="M250 87 Q228 52 250 24 Q272 52 250 87Z" transform="rotate(275 250 190)"/>
+              <path d="M250 87 Q228 52 250 24 Q272 52 250 87Z" transform="rotate(300 250 190)"/>
+              <path d="M250 87 Q228 52 250 24 Q272 52 250 87Z" transform="rotate(325 250 190)"/>
+            </g>
+
+            <path class="inner-rim" d="M95 127 C95 70 185 65 250 139 C315 65 405 70 405 127 C405 194 285 266 250 286 C215 266 95 194 95 127Z"/>
+            <ellipse cx="250" cy="190" rx="95" ry="55" fill="#d8ad72" opacity=".18"/>
+          </svg>
+
+          <div id="decorLayer" class="decor-layer"></div>
+        </div>
+        <div class="water-lines"></div>
+      </div>
+
+      <div class="panel tools-panel">
+        <h3>เลือกของตกแต่ง</h3>
+        <div class="tools">
+          <button class="tool selected" data-type="rose">
+            <span class="preview rose-preview"></span><span>กุหลาบ</span>
+          </button>
+          <button class="tool" data-type="lotus">
+            <span class="preview lotus-preview"></span><span>ดอกบัว</span>
+          </button>
+          <button class="tool" data-type="tulip">
+            <span class="preview tulip-preview"></span><span>ทิวลิป</span>
+          </button>
+          <button class="tool" data-type="daisy">
+            <span class="preview daisy-preview"></span><span>เดซี่</span>
+          </button>
+          <button class="tool" data-type="orchid">
+            <span class="preview orchid-preview"></span><span>กล้วยไม้</span>
+          </button>
+          <button class="tool" data-type="candle">
+            <span class="preview candle-preview"></span><span>เทียน</span>
+          </button>
+          <button class="tool" data-type="incense">
+            <span class="preview incense-preview"></span><span>ธูป</span>
+          </button>
+        </div>
+        <p class="hint">แตะบนกระทงเพื่อวาง • ลากเพื่อย้าย • ลากไปที่ถังขยะเพื่อลบ</p>
+        <button id="trash" class="trash">ลากของมาที่นี่เพื่อลบ</button>
+      </div>
+
+      <div class="panel wish-panel">
+        <h2>คำอธิษฐานของเรา</h2>
+        <p class="hint">พิมพ์ได้ยาวถึง 5,000 ตัวอักษร อีกฝ่ายจะเห็นข้อความของเธอทันที</p>
+        <label for="myWish">คำอธิษฐานของฉัน</label>
+        <textarea id="myWish" maxlength="5000" placeholder="เขียนคำอธิษฐานจากใจของเธอได้เลย..."></textarea>
+        <div class="wish-meta"><span id="charCount">0 / 5000</span><span id="saveStatus">ยังไม่ได้บันทึก</span></div>
+        <div class="received">
+          <h3>คำอธิษฐานที่อีกฝ่ายเขียน</h3>
+          <p id="partnerWish">รอคำอธิษฐานจากอีกฝ่ายอยู่นะ...</p>
+        </div>
+      </div>
+
+      <div class="panel ready-panel">
+        <p id="readyStatus">เมื่อตกแต่งและเขียนคำอธิษฐานเสร็จแล้ว กดตกลงได้เลย</p>
+        <button id="readyBtn" class="ready-btn">ตกลง พร้อมลอยกระทง ♡</button>
+      </div>
+    </section>
+
+    <section id="floatingScene" class="floating-scene" hidden>
+      <div class="float-moon"></div>
+      <div class="float-water"></div>
+      <div id="floatingCraft" class="floating-craft"></div>
+      <p class="floating-caption">ขอให้คำอธิษฐานของเราลอยไปถึงดวงดาว...</p>
+    </section>
+
+    <section id="wishReveal" class="wish-reveal" hidden>
+      <div class="reveal-card">
+        <p class="eyebrow">OUR WISHES</p>
+        <h2>คำอธิษฐานของเราสองคน</h2>
+        <div class="wish-reveal-item">
+          <h3>คำอธิษฐานของฝั่งซ้าย</h3>
+          <p id="finalLeftWish"></p>
+        </div>
+        <div class="wish-reveal-item">
+          <h3>คำอธิษฐานของฝั่งขวา</h3>
+          <p id="finalRightWish"></p>
+        </div>
+        <p class="ending">ขอให้ทุกคำอธิษฐานเป็นจริงนะ ♡</p>
+      </div>
+    </section>
+  </main>
+
+  <footer>made with love, under the same moon ♡</footer>
+
+  <script src="https://www.gstatic.com/firebasejs/10.12.5/firebase-app-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/10.12.5/firebase-auth-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/10.12.5/firebase-database-compat.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
